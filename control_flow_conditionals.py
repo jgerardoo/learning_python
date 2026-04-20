@@ -38,3 +38,16 @@ elif grade >= 60:
 else:
   print("F")
 print("-----------------------")
+
+# Match
+user_name = "Regular"
+match user_name:
+    case "Admin":
+        print("Welcome Admin user")
+    case "Regular":
+        print("Welcome Regular user")
+    case "Spam user":
+        print("Spam users not welcome")
+    case default:
+        print("Username not recognized.")
+print("-----------------------")
