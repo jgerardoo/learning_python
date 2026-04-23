@@ -184,4 +184,16 @@ print(cities)
 cities.sort(reverse = True)
 print(cities)
 print()
-# sorted()
+
+# combining/nesting lists using the zip() function
+names_2 = ["Jenny", "Alexus", "Sam", "Grace"]
+heights_2 = [61, 70, 67, 64]
+print(names_2)
+print(heights_2)
+names_and_heights = zip(names_2, heights_2)
+print(names_and_heights)
+print(type(names_and_heights))
+# this prints "<zip object at 0x7f1631e86b48>" so we need to make this object a list using list()
+names_and_heights = list(names_and_heights)
+print(names_and_heights)
+print(type(names_and_heights))
