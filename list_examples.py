@@ -197,3 +197,13 @@ print(type(names_and_heights))
 names_and_heights = list(names_and_heights)
 print(names_and_heights)
 print(type(names_and_heights))
+print()
+
+# combine two simple lists using a for loop
+students_period_A = ["Alex", "Briana", "Cheri", "Daniele"]
+students_period_B = ["Dora", "Minerva", "Alexa", "Obie"]
+
+for student in students_period_B:
+  students_period_A.append(student)
+  print(f"Adding {student} to students_period_A")
+print(students_period_A)
