@@ -6,6 +6,7 @@ user_item = "phone"
 user_item_2 = "TABLET"
 user_description = "this is a description"
 color_list = ["blue", "red", "brown", "white"]
+line_with_space = "    Space."
 
 # String slicing
 print(user_name[2:4])
@@ -39,6 +40,8 @@ print()
 # Join (iterable)
 print(color_list)
 print(' '.join(color_list))
+print('.'.join(color_list))
+print(' | '.join(color_list))
 print()
 
 # startswith (prefix)
@@ -55,8 +58,9 @@ print()
 
 # find (substring)
 print(user_location)
-print(user_location.find("Katy"))
-print(user_location.find("Texas"))
+print(user_location.find("Katy"))   # Returns the index of the argument found
+print(user_location.find("Texas"))  # Returns the index of the argument found
+print(user_location.find("x"))      # Returns the index of the argument found
 print(user_name.find("Katy"))       # Returns a -1 if not found
 print()
 
@@ -91,3 +95,32 @@ print()
 print(user_description)
 print(user_description.title())
 print()
+
+# strip()
+print(line_with_space)
+print(line_with_space.strip())
+print()
+
+# in
+print("e" in "blueberry")
+print("a" in "blueberry")
+print("blue" in "blueberry")
+print("blue" in "strawberry")
+print("e" in "blueberry" and "e" in "carrot")
+print("e" in "blueberry" and not "e" in "carrot")
+print()
+
+# .format()
+def poem_title_card(title, poet):
+  return "The poem {} is written by {}".format(title, poet)
+print(poem_title_card("I Hear America Singing", "Walt Whitman"))
+
+def poem_description(publishing_date, author, title, original_work):
+  poem_desc = "The poem {title} by {author} was originally published in {original_work} in {publishing_date}.".format(publishing_date = publishing_date, author = author, title = title, original_work = original_work)
+  return poem_desc
+author = "Shel Silverstein"
+title = "My Beard"
+original_work = "Where the Sidewalk Ends"
+publishing_date = "1974"
+my_beard_description = poem_description(publishing_date, author, title, original_work)
+print(my_beard_description)
