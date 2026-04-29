@@ -1,3 +1,6 @@
+print("---------- PRACTICE 1 ----------")
+print("--------- Lots of Math ---------")
+
 # raw data for a given day's transactions
 daily_sales = \
 """Edith Mcbride   ;,;$1.21   ;,;   white ;,; 
@@ -169,3 +172,32 @@ for color in colors:
   total_sold = "Thread Shed sold {} threads of {} thread today".format(color_count(colors[index]), color)
   print(total_sold)
   index += 1
+print()
+
+print("---------- PRACTICE 2 ----------")
+print("----- 'greg-i-fied strings' ----")
+# Write a function called gregs_e_tagger that takes a string as an argument and inserts
+# "greg" in the middle of the string and then returns the new “greg-i-fied” string.
+# For odd length strings, consider the “middle” to be left of the middle character.
+
+def gregs_e_tagger(word):
+  if (len(word) % 2) == 0:
+    greg_word = word[0:int(len(word)/2)] + "-greg-" + word[int(len(word)/2):]
+  else:
+    half = int((len(word)/2)-.5)
+    greg_word = word[0:half] + "-greg-" + word[half:]
+  print(greg_word)
+
+gregs_e_tagger("console")
+gregs_e_tagger("pencil")
+
+# Solution from the exercise:
+def gregs_e_tagger_2(string):
+  middle_index = len(string) // 2
+  left = string[:middle_index]
+  right = string[middle_index:]
+  result = left + 'greg' + right
+  return result
+
+print(gregs_e_tagger_2('console'))
+print(gregs_e_tagger_2('pencil'))
