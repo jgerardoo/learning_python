@@ -145,7 +145,7 @@ print(letters)
 sliced_letters_list = letters[2:6]
 print(sliced_letters_list)
 print()
-suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books.csv"]
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
 print(suitcase)
 last_two_elements = suitcase[-2:]
 print(last_two_elements)

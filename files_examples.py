@@ -85,5 +85,3 @@ data_payload = {"interesting message": "What is JSON? A web application's little
 with open("files/data.json", "w") as data_json:
   json.dump(data_payload, data_json)
 ## this code created a new json file named :data.json" and wrote the info from the list into the file
-
-# 
